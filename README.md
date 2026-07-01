@@ -18,11 +18,11 @@ A production-grade backend system built to scan and assess security posture acro
  
 ## Problem I Solved
  
-**Challenge**: Neo4j database faced severe locking issues when storing 150+ million relationships from continuous data ingestion. Bulk ingestion limits in community edition created bottlenecks.
+**Challenge & Solution**
  
-**Solution**: Implemented a hot/cold data strategy — keeping last 2 scans in active database, archiving 1-year historical data separately. This reduced locking contention, improved query performance, and maintained scalability without upgrading infrastructure.
+Neo4j faced severe locking with 150+ million relationships. Community edition bulk ingestion limits created bottlenecks during continuous data ingestion.
  
-**Result**: System remained stable under production load, maintaining scanning capabilities while reducing database pressure by 70%.
+Implemented hot/cold data strategy — last 2 scans in active database, 1-year historical data archived separately. This eliminated locking contention, improved query performance, and enabled real-time scanning without infrastructure upgrade.
  
 ## Key Features
 - vulnerability detection
